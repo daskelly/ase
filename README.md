@@ -2,7 +2,7 @@
 
 This repository contains code to implement the model of allele-specific expression
 (ASE) described in Skelly et al. 2011 Genome Research 
-[dx.doi.org/10.1101/gr.119784.110](dx.doi.org/10.1101/gr.119784.110).
+[doi:10.1101/gr.119784.110](https://dx.doi.org/10.1101/gr.119784.110).
 
 The directory [biased_SNPs](biased_SNPs) provides code to implement the model
 for detecting biased SNPs from DNA data. These SNPs are then filtered out for all
