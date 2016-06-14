@@ -7,10 +7,10 @@ biased SNPs described in section 1.3.1 of the supplementary
 material. There are two separate implementations of the model,
 both of which are run using R and should produce very similar results:
 
-1. The original implementation released with the paper, 
+1. The original implementation used in the paper, 
 available in the directory [orig](orig). The code in this directory
-is updated from that available on the *Genome Research* website to fix
-several bugs and improve clarity.
+was not originally released with the paper but was used to 
+filter out putatively biased SNPs.
 2. An implementation of the model using [JAGS](http://mcmc-jags.sourceforge.net/). JAGS is a general framework
 for simulation from Bayesian hierarchical models using MCMC. Here we
 call JAGS from R using the rjags package.
