@@ -33,3 +33,23 @@ easier to troubleshoot, but should be considered a preview release
 in that it may still contain bugs.
 Over the longer term, development will focus on the JAGS implementation
 and the original code will be archived.
+
+## Note about the model
+
+This model is not strictly necessary for running the model of ASE
+described in the paper. Nevertheless, it is important to make sure that 
+SNPs that show highly biased allelic read counts in genomic DNA are
+removed. In our study, we expected that allelic read counts would show 
+some variability beyond that expected from statistical sampling, 
+due to factors such as the many steps involved in preparation of sequencing
+libraries. Read counts at a minority of SNPs in our genomic DNA data 
+appeared highly biased, even after removing SNPs where reads generated 
+*in silico* did not show 50/50 mapping of alleles.
+
+The results of this model should be fairly similar to the simpler 
+strategy of filtering out SNPs that have small *p*-values according
+to the binomial exact test. In our experience, 
+the model implemented here is slightly
+more conservative (i.e. more SNPs are called as biased) than 
+removing those SNPs that have a Bonferroni-corrected *p*-value
+less than 0.05 according to the binomial exact test.
