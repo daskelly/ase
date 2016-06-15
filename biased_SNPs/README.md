@@ -72,6 +72,10 @@ source("run_test.R")
 source("../calculate_posterior_prob_biased.R")
 ```
 
+Note that these simulations use "toy" data simulated under the
+same model as that being inferred, so they do not provide
+any indication of whether *your* data fits the model.
+
 For a real analysis of non-simulated data,
 in `calculate_posterior_prob_biased.R` you may need to change 
 the assignment of `Y` and `N` in lines 22-23 to
