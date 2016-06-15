@@ -14,6 +14,6 @@ mat$p <- apply(mat, 1, function(row) binom.test(row[1], row[2])$p.value)
 isNull <- rep(NA, n.snps)
 isNull[which.min(mat$p)] <- FALSE
 isNull[which.max(mat$p)] <- TRUE
-datlist <- list(nsnps=dat$n.snps, Y=dat$Y, N=dat$N)
+datlist <- list(nsnps=n.snps, Y=dat$Y, N=dat$N)
 
 source('biased_snps_rjags.R')
