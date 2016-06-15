@@ -77,6 +77,13 @@ same model as that being inferred, so they do not provide
 any indication of whether *your* data fits the model.
 
 For a real analysis of non-simulated data,
-in `calculate_posterior_prob_biased.R` you may need to change 
+you could start from either of the `run_test.R` scripts above
+and modify it to read in your data and run the model.
+This should be straightforward as the `run_test.R` scripts are less than 
+25 lines of code. Then, as above, you can use code in
+`calculate_posterior_prob_biased.R` to calculate the posterior probability
+that each SNP is biased. You will need to change 
 the assignment of `Y` and `N` in lines 22-23 to
 reflect your data rather than the simulated data.
+Then you will filter out SNPs with high posterior probability of being
+biased from further consideration.
