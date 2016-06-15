@@ -13,7 +13,7 @@ thin <- 100
 source('2componentNullModel.bySNP.R')
 unlink(filename)
 
-posterior.medians <- sapply(result$final, median)
+posterior.medians <- sapply(result$final, function(x) median(x$sims))
 print(posterior.medians)
 
 pi0.hat <- posterior.medians["pi0"]
