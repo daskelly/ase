@@ -1,7 +1,7 @@
 # Run a test of the model using simulated data
 source('../simulate_data.R')
 
-dat <- simulate.data()
+dat <- simulate.data()   # can specify n.snps=100 for a very quick run
 n.snps <- length(dat$Y)
 # columns 1 and 2 are currently ignored.
 df <- data.frame(gene=rep("gene", n.snps), SNP=1:n.snps, dat$Y, dat$N-dat$Y)
@@ -11,10 +11,12 @@ write.table(df, file=filename, col.names=F, row.names=F, sep="\t", quote=F)
 n.iter <- 100000
 thin <- 100
 source('2componentNullModel.bySNP.R')
-# the above should take less than a minute
+unlink(filename)
 
-sapply(result$final, function(item) 
-    quantile(item$sims, c(.025, .25, .75, .975)))
+posterior.medians <- sapply(result$final, median)
+print(posterior.medians)
 
-
-# plot a hist of posterior prob(ASE)
+pi0.hat <- posterior.medians["pi0"]
+alpha.hat <- posterior.medians["alpha"]
+delta.hat <- posterior.medians["delta"]
+epsilon.hat <- posterior.medians["epsilon"]
