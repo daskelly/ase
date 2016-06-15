@@ -11,8 +11,7 @@ both of which are run using R and should produce very similar results:
 
 1. The original implementation used in the paper, 
 available in the directory [orig](orig). The code in this directory
-was not originally released with the paper but was used to 
-filter out putatively biased SNPs.
+was used to filter out putatively biased SNPs in that analysis.
 2. An implementation of the model using [JAGS](http://mcmc-jags.sourceforge.net/). JAGS is a general framework
 for simulation from Bayesian hierarchical models using MCMC. Here we
 call JAGS from R using the runjags and rjags packages.
@@ -31,6 +30,7 @@ be difficult to troubleshoot.
 The second implementation should be significantly faster and much
 easier to troubleshoot, but should be considered a preview release 
 in that it may still contain bugs.
+
 Over the longer term, development will focus on the JAGS implementation
 and the original code will be archived.
 
@@ -45,6 +45,7 @@ due to factors such as the many steps involved in preparation of sequencing
 libraries. Read counts at a minority of SNPs in our genomic DNA data 
 appeared highly biased, even after removing SNPs where reads generated 
 *in silico* did not show 50/50 mapping of alleles.
+The model above was thus used to filter out such highly biased SNPs.
 
 The results of this model should be fairly similar to the simpler 
 strategy of filtering out SNPs that have small *p*-values according
