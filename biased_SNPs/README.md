@@ -7,19 +7,19 @@ biased SNPs described in section 1.3.1 of the supplementary
 material in 
 [doi:10.1101/gr.119784.110](https://dx.doi.org/10.1101/gr.119784.110). 
 There are two separate implementations of the model,
-both of which are run using `R` and should produce very similar results:
+both of which are run using R and should produce very similar results:
 
 1. The original implementation used in the paper, 
 available in the directory [orig](orig). The code in this directory
 was used to filter out putatively biased SNPs in that analysis.
 2. An implementation of the model using [JAGS](http://mcmc-jags.sourceforge.net/). JAGS is a general framework
 for simulation from Bayesian hierarchical models using MCMC. Here we
-call JAGS from `R` using the `runjags` and `rjags` packages.
+call JAGS from R using the `runjags` and `rjags` packages.
 
 ## Dependencies
 
-* [orig](orig): the optparse R package
-* [JAGS](JAGS): the rjags and runjags R packages
+* [orig](orig): the `optparse` R package
+* [JAGS](JAGS): the `rjags` and `runjags` R packages
 
 ## Which implementation should you choose? 
 
@@ -57,7 +57,8 @@ less than 0.05 according to the binomial exact test.
 
 ## Example code
 
-Here is some code to run a test analysis. Using the original model:
+Here is some code to run a test analysis from within R. 
+Using the original model:
 ```
 setwd("orig")
 source("run_test.R")
@@ -71,6 +72,7 @@ source("run_test.R")
 source("../calculate_posterior_prob_biased.R")
 ```
 
-In `calculate_posterior_prob_biased.R` you may need to change 
-the assignment of `Y` and `N` a few lines after line 20 to 
-reflect your real data rather than the simulated data.
+For a real analysis of non-simulated data,
+in `calculate_posterior_prob_biased.R` you may need to change 
+the assignment of `Y` and `N` in lines 22-23 to
+reflect your data rather than the simulated data.
