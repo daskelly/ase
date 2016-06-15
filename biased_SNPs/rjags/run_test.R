@@ -1,7 +1,7 @@
 # Run a test of the model using simulated data
 source('../simulate_data.R')
 
-dat <- simulate.data()
+dat <- simulate.data()   # can specify n.snps=100 for a very quick run
 n.snps <- length(dat$Y)
 
 mat <- data.frame(Y=dat$Y, N=dat$N)
