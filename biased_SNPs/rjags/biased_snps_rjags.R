@@ -12,6 +12,6 @@ posterior.medians <- apply(as.mcmc(mod), 2, median)
 print(posterior.medians)
 
 pi0.hat <- posterior.medians["pi0"]
-alpha.hat <- posterior.medians["shape1[1]"]    # == shape2[1]
-delta.hat <- posterior.medians["shape1[2]"]
-epsilon.hat <- posterior.medians["shape2[2]"]
+alpha.hat <- posterior.medians["shape1[2]"]    # == shape2[2]
+delta.hat <- posterior.medians["shape1[1]"]
+epsilon.hat <- posterior.medians["shape2[1]"]
