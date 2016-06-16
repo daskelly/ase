@@ -18,11 +18,11 @@ The directory [RNA_model](RNA_model) provides code to implement the model
 to detect ASE in read counts derived from RNA. This model is described in section 1.3.3 
 of the supplementary material. See the README in that directory for more details.
 
-[This](tutorial.pdf) tutorial (PDF) provides an overview of how to use
+[This tutorial](tutorial.pdf) (PDF) provides an overview of how to use
 scripts in the `DNA_model/orig` and `RNA_model/orig` directories to implement
 our statistical model for ASE. These are the scripts that were originally
 released with the paper and are available on the *Genome Research*
 website as supplementary information. They have a few corrections from
 the exact code published on the *Genome Research* website to account for
 bugs discovered after publication as well as changes to dependencies 
-that the code makes use of.
+that the code utilizes.
