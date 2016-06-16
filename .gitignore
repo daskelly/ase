@@ -1,4 +1,5 @@
 *.Rdata
+!trueValues.Rdata
 *.rda
 *.aux
 *.bbl
